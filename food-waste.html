@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Waste Reduction | ReCircle Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo">
+        <img src="assets/logo.png" alt="ReCircle Logo" />
+        <h2>ReCircle</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="dashboard.html"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+          <li><a href="community.html"><i class="fas fa-users"></i> <span>Community</span></a></li>
+          <li><a href="recycling.html"><i class="fas fa-recycle"></i> <span>Recycling</span></a></li>
+          <li><a href="events.html"><i class="fas fa-calendar-alt"></i> <span>Events</span></a></li>
+          <li><a href="local-map.html"><i class="fas fa-map-marker-alt"></i> <span>Local Map</span></a></li>
+          <li class="active"><a href="food-waste.html"><i class="fas fa-utensils"></i> <span>Food Waste</span></a></li>
+          <li><a href="settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-logout">
+        <a href="logout.html"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+      <h1>Food Waste Reduction Hub</h1>
+
+      <!-- Meal Planning Section -->
+      <section class="dashboard-section">
+        <h2><i class="fas fa-list-alt"></i> Meal Planning</h2>
+        <p>
+          Plan your meals to reduce overbuying and food waste. Use our planner to track your pantry and create smart shopping lists.
+        </p>
+        <!-- Placeholder for meal planning UI -->
+        <div class="placeholder">[Meal Planning Tool Coming Soon]</div>
+      </section>
+
+      <!-- Community Food Sharing Section -->
+      <section class="dashboard-section">
+        <h2><i class="fas fa-hands-helping"></i> Community Food Sharing</h2>
+        <p>
+          Share surplus food with your community or claim food shared by others. Select food items, specify quantities, and arrange safe pickups.
+        </p>
+        <!-- Placeholder for food sharing UI -->
+        <div class="placeholder">[Community Food Sharing Coming Soon]</div>
+      </section>
+
+      <!-- Local Redistribution Program Section -->
+      <section class="dashboard-section">
+        <h2><i class="fas fa-donate"></i> Local Redistribution Program</h2>
+        <p>
+          Search for local food banks and donation programs. Donate excess food to help those in need and reduce waste.
+        </p>
+        <!-- Placeholder for redistribution search UI -->
+        <div class="placeholder">[Redistribution Search Coming Soon]</div>
+      </section>
+
+      <!-- Recipe Sharing Section -->
+      <section class="dashboard-section">
+        <h2><i class="fas fa-book-open"></i> Recipe Sharing <span class="optional">(Optional)</span></h2>
+        <p>
+          Share creative recipes with your community and discover new ideas to use up leftovers and reduce waste.
+        </p>
+        <!-- Placeholder for recipe sharing UI -->
+        <div class="placeholder">[Recipe Sharing Coming Soon]</div>
+      </section>
+    </main>
+  </div>
+
+  <style>
+    .dashboard-main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      font-family: Arial, sans-serif;
+    }
+    .dashboard-main h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2e7d32;
+    }
+    .dashboard-section {
+      margin-bottom: 2rem;
+      padding: 1.5rem 1rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    .dashboard-section h2 {
+      color: #388e3c;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+    .dashboard-section .optional {
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .placeholder {
+      margin-top: 1rem;
+      background: #e8f5e9;
+      color: #388e3c;
+      padding: 0.8rem;
+      border-radius: 6px;
+      text-align: center;
+      font-style: italic;
+    }
+    /* Sidebar and container styles assumed from dashboard.css */
+  </style>
+</body>
+</html>
