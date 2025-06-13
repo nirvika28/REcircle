@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community - ReCircle</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-recycle"></i>
+          </div>
+          <span class="logo-text">ReCircle</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="dashboard.html">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="recycling.html">
+              <i class="fas fa-recycle"></i>
+              <span>Recycling</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="community.html">
+              <i class="fas fa-users"></i>
+              <span>Community</span>
+            </a>
+          </li>
+          <li>
+            <a href="events.html">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Events</span>
+            </a>
+          </li>
+          <li>
+            <a href="map.html">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Local Map</span>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html">
+              <i class="fas fa-cog"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="index.html">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+      <!-- Mobile Header -->
+      <header class="mobile-header">
+        <button class="menu-toggle" id="sidebar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-recycle"></i>
+          </div>
+          <span class="logo-text">ReCircle</span>
+        </a>
+      </header>
+
+      <div class="dashboard-content">
+        <div class="dashboard-header">
+          <h1>Community</h1>
+        </div>
+
+        <div class="search-container">
+          <div class="search-input">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search communities, posts, or members...">
+          </div>
+        </div>
+
+        <div class="tabs">
+          <div class="tab-list">
+            <button class="tab active" data-tab="feed">Community Feed</button>
+            <button class="tab" data-tab="clusters">Local Clusters</button>
+            <button class="tab" data-tab="members">Members</button>
+          </div>
+
+          <div class="tab-content">
+            <!-- Community Feed Tab -->
+            <div class="tab-pane active" id="feed">
+              <div class="community-card">
+                <div class="card-header">
+                  <h3>Share with the Community</h3>
+                  <p>Share tips, ask questions, or post updates about your sustainability journey</p>
+                </div>
+                <div class="card-content">
+                  <form class="form">
+                    <textarea placeholder="What's on your mind?" class="post-textarea"></textarea>
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-primary">Post Update</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="posts">
+                <div class="post-card">
+                  <div class="post-content">
+                    <div class="post-author">
+                      <div class="author-avatar"></div>
+                      <div class="author-details">
+                        <div class="author-meta">
+                          <p class="author-name">Sarah Johnson</p>
+                          <p class="post-time">2 hours ago</p>
+                        </div>
+                        <p class="post-text">Just finished setting up my home composting system! It was much easier than I expected. Has anyone else tried this? Any tips for a beginner?</p>
+                        <div class="post-actions">
+                          <button class="post-action">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>24</span>
+                          </button>
+                          <button class="post-action">
+                            <i class="fas fa-comment"></i>
+                            <span>8</span>
+                          </button>
+                          <button class="post-action">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="post-card">
+                  <div class="post-content">
+                    <div class="post-author">
+                      <div class="author-avatar"></div>
+                      <div class="author-details">
+                        <div class="author-meta">
+                          <p class="author-name">Portland Eco Warriors</p>
+                          <p class="post-time">Yesterday</p>
+                        </div>
+                        <p class="post-text">We're organizing a community cleanup this Saturday at Riverside Park from 9am-12pm. Bring gloves if you have them, but we'll provide all other supplies. Hope to see many of you there!</p>
+                        <div class="post-actions">
+                          <button class="post-action">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>42</span>
+                          </button>
+                          <button class="post-action">
+                            <i class="fas fa-comment"></i>
+                            <span>15</span>
+                          </button>
+                          <button class="post-action">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="post-card">
+                  <div class="post-content">
+                    <div class="post-author">
+                      <div class="author-avatar"></div>
+                      <div class="author-details">
+                        <div class="author-meta">
+                          <p class="author-name">Miguel Rodriguez</p>
+                          <p class="post-time">2 days ago</p>
+                        </div>
+                        <p class="post-text">I found this great guide on how to properly recycle electronics. Thought it might be helpful for others in our community: [Link to Guide]</p>
+                        <div class="post-actions">
+                          <button class="post-action">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>18</span>
+                          </button>
+                          <button class="post-action">
+                            <i class="fas fa-comment"></i>
+                            <span>5</span>
+                          </button>
+                          <button class="post-action">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Local Clusters Tab -->
+            <div class="tab-pane" id="clusters">
+              <div class="clusters-grid">
+                <div class="cluster-card">
+                  <div class="card-header">
+                    <div class="cluster-header">
+                      <h3>Portland Eco Warriors</h3>
+                      <span class="cluster-badge">128 members</span>
+                    </div>
+                    <p class="cluster-location">
+                      <i class="fas fa-map-marker-alt"></i>
+                      Portland, OR
+                    </p>
+                  </div>
+                  <div class="card-content">
+                    <p class="cluster-description">A community focused on urban sustainability and waste reduction in Portland.</p>
+                    <div class="cluster-tags">
+                      <span class="tag">Urban</span>
+                      <span class="tag">Recycling</span>
+                      <span class="tag">Education</span>
+                    </div>
+                    <button class="btn btn-primary btn-block">Join Cluster</button>
+                  </div>
+                </div>
+
+                <div class="cluster-card">
+                  <div class="card-header">
+                    <div class="cluster-header">
+                      <h3>Green Thumb Gardeners</h3>
+                      <span class="cluster-badge">86 members</span>
+                    </div>
+                    <p class="cluster-location">
+                      <i class="fas fa-map-marker-alt"></i>
+                      Portland, OR
+                    </p>
+                  </div>
+                  <div class="card-content">
+                    <p class="cluster-description">Community gardening, composting, and food sharing initiatives.</p>
+                    <div class="cluster-tags">
+                      <span class="tag">Gardening</span>
+                      <span class="tag">Composting</span>
+                      <span class="tag">Food</span>
+                    </div>
+                    <button class="btn btn-primary btn-block">Join Cluster</button>
+                  </div>
+                </div>
+
+                <div class="cluster-card">
+                  <div class="card-header">
+                    <div class="cluster-header">
+                      <h3>Zero Waste Portland</h3>
+                      <span class="cluster-badge">210 members</span>
+                    </div>
+                    <p class="cluster-location">
+                      <i class="fas fa-map-marker-alt"></i>
+                      Portland, OR
+                    </p>
+                  </div>
+                  <div class="card-content">
+                    <p class="cluster-description">Working towards a zero waste lifestyle in the Portland metro area.</p>
+                    <div class="cluster-tags">
+                      <span class="tag">Zero Waste</span>
+                      <span class="tag">Minimalism</span>
+                      <span class="tag">DIY</span>
+                    </div>
+                    <button class="btn btn-primary btn-block">Join Cluster</button>
+                  </div>
+                </div>
+
+                <div class="cluster-card">
+                  <div class="card-header">
+                    <div class="cluster-header">
+                      <h3>Sustainable Transport PDX</h3>
+                      <span class="cluster-badge">94 members</span>
+                    </div>
+                    <p class="cluster-location">
+                      <i class="fas fa-map-marker-alt"></i>
+                      Portland, OR
+                    </p>
+                  </div>
+                  <div class="card-content">
+                    <p class="cluster-description">Promoting car-free living and sustainable transportation options.</p>
+                    <div class="cluster-tags">
+                      <span class="tag">Transport</span>
+                      <span class="tag">Cycling</span>
+                      <span class="tag">Public Transit</span>
+                    </div>
+                    <button class="btn btn-primary btn-block">Join Cluster</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Members Tab -->
+            <div class="tab-pane" id="members">
+              <div class="community-card full-width">
+                <div class="card-header">
+                  <h3>Community Members</h3>
+                  <p>Connect with other ReCircle members in your area</p>
+                </div>
+                <div class="card-content">
+                  <div class="members-grid">
+                    <div class="member-card">
+                      <div class="member-avatar"></div>
+                      <h4 class="member-name">Sarah Johnson</h4>
+                      <p class="member-location">Portland, OR</p>
+                      <p class="member-joined">Member since 2022</p>
+                      <div class="member-badges">
+                        <span class="badge">Recycling Pro</span>
+                        <span class="badge">Community Leader</span>
+                      </div>
+                    </div>
+
+                    <div class="member-card">
+                      <div class="member-avatar"></div>
+                      <h4 class="member-name">Miguel Rodriguez</h4>
+                      <p class="member-location">Portland, OR</p>
+                      <p class="member-joined">Member since 2023</p>
+                      <div class="member-badges">
+                        <span class="badge">Event Organizer</span>
+                      </div>
+                    </div>
+
+                    <div class="member-card">
+                      <div class="member-avatar"></div>
+                      <h4 class="member-name">Aisha Williams</h4>
+                      <p class="member-location">Portland, OR</p>
+                      <p class="member-joined">Member since 2021</p>
+                      <div class="member-badges">
+                        <span class="badge">Composting Expert</span>
+                        <span class="badge">100kg Club</span>
+                      </div>
+                    </div>
+
+                    <div class="member-card">
+                      <div class="member-avatar"></div>
+                      <h4 class="member-name">David Chen</h4>
+                      <p class="member-location">Portland, OR</p>
+                      <p class="member-joined">Member since 2022</p>
+                      <div class="member-badges">
+                        <span class="badge">Zero Waste Advocate</span>
+                      </div>
+                    </div>
+
+                    <div class="member-card">
+                      <div class="member-avatar"></div>
+                      <h4 class="member-name">Emma Thompson</h4>
+                      <p class="member-location">Portland, OR</p>
+                      <p class="member-joined">Member since 2023</p>
+                      <div class="member-badges">
+                        <span class="badge">New Member</span>
+                      </div>
+                    </div>
+
+                    <div class="member-card">
+                      <div class="member-avatar"></div>
+                      <h4 class="member-name">James Wilson</h4>
+                      <p class="member-location">Portland, OR</p>
+                      <p class="member-joined">Member since 2022</p>
+                      <div class="member-badges">
+                        <span class="badge">Recycling Pro</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/community.js"></script>
+</body>
+</html>

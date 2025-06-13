@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recycling - ReCircle</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-body">
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-recycle"></i>
+          </div>
+          <span class="logo-text">ReCircle</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="dashboard.html">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="recycling.html">
+              <i class="fas fa-recycle"></i>
+              <span>Recycling</span>
+            </a>
+          </li>
+          <li>
+            <a href="community.html">
+              <i class="fas fa-users"></i>
+              <span>Community</span>
+            </a>
+          </li>
+          <li>
+            <a href="events.html">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Events</span>
+            </a>
+          </li>
+          <li>
+            <a href="map.html">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Local Map</span>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html">
+              <i class="fas fa-cog"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="index.html">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+      <!-- Mobile Header -->
+      <header class="mobile-header">
+        <button class="menu-toggle" id="sidebar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-recycle"></i>
+          </div>
+          <span class="logo-text">ReCircle</span>
+        </a>
+      </header>
+
+      <div class="dashboard-content">
+        <div class="dashboard-header">
+          <h1>Recycling</h1>
+        </div>
+
+        <div class="tabs">
+          <div class="tab-list">
+            <button class="tab active" data-tab="log">Log Recycling</button>
+            <button class="tab" data-tab="history">History</button>
+            <button class="tab" data-tab="guide">Recycling Guide</button>
+          </div>
+
+          <div class="tab-content">
+            <!-- Log Recycling Tab -->
+            <div class="tab-pane active" id="log">
+              <div class="recycling-grid">
+                <div class="recycling-card">
+                  <div class="card-header">
+                    <h3>Log Your Recycling</h3>
+                    <p>Record what you've recycled to track your impact and earn credits.</p>
+                  </div>
+                  <div class="card-content">
+                    <form id="recycling-form" class="form">
+                      <div class="form-group">
+                        <label for="material-type">Material Type</label>
+                        <select id="material-type" required>
+                          <option value="" disabled selected>Select material type</option>
+                          <option value="paper">Paper</option>
+                          <option value="plastic">Plastic</option>
+                          <option value="glass">Glass</option>
+                          <option value="metal">Metal</option>
+                          <option value="organic">Organic</option>
+                          <option value="electronic">Electronic</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" placeholder="Enter weight" required step="0.1" min="0.1">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="photo">Photo (optional)</label>
+                        <div class="photo-buttons">
+                          <button type="button" class="btn btn-outline">
+                            <i class="fas fa-camera"></i>
+                            Take Photo
+                          </button>
+                          <button type="button" class="btn btn-outline">
+                            <i class="fas fa-upload"></i>
+                            Upload
+                          </button>
+                        </div>
+                      </div>
+
+                      <button type="submit" class="btn btn-primary btn-block">Log Recycling</button>
+                    </form>
+                  </div>
+                </div>
+
+                <div class="recycling-sidebar">
+                  <div class="recycling-card">
+                    <div class="card-header">
+                      <h3>Monthly Goals</h3>
+                      <p>Your progress towards this month's recycling targets</p>
+                    </div>
+                    <div class="card-content">
+                      <div class="goal-item">
+                        <div class="goal-header">
+                          <span>Paper: 12.5/20 kg</span>
+                          <span>63%</span>
+                        </div>
+                        <div class="progress-bar">
+                          <div class="progress" style="width: 63%"></div>
+                        </div>
+                      </div>
+
+                      <div class="goal-item">
+                        <div class="goal-header">
+                          <span>Plastic: 8.2/10 kg</span>
+                          <span>82%</span>
+                        </div>
+                        <div class="progress-bar">
+                          <div class="progress" style="width: 82%"></div>
+                        </div>
+                      </div>
+
+                      <div class="goal-item">
+                        <div class="goal-header">
+                          <span>Glass: 3.5/15 kg</span>
+                          <span>23%</span>
+                        </div>
+                        <div class="progress-bar">
+                          <div class="progress" style="width: 23%"></div>
+                        </div>
+                      </div>
+
+                      <div class="goal-item">
+                        <div class="goal-header">
+                          <span>Metal: 4.8/5 kg</span>
+                          <span>96%</span>
+                        </div>
+                        <div class="progress-bar">
+                          <div class="progress" style="width: 96%"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="recycling-card">
+                    <div class="card-header">
+                      <h3>Recycling Achievements</h3>
+                      <p>Badges and milestones you've earned</p>
+                    </div>
+                    <div class="card-content">
+                      <div class="badges">
+                        <span class="badge green">
+                          <i class="fas fa-award"></i> 100kg Milestone
+                        </span>
+                        <span class="badge blue">
+                          <i class="fas fa-award"></i> Paper Pro
+                        </span>
+                        <span class="badge purple">
+                          <i class="fas fa-award"></i> 30-Day Streak
+                        </span>
+                        <span class="badge amber">
+                          <i class="fas fa-award"></i> Community Leader
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- History Tab -->
+            <div class="tab-pane" id="history">
+              <div class="recycling-card full-width">
+                <div class="card-header">
+                  <h3>Recycling History</h3>
+                  <p>View your recycling activity over time</p>
+                </div>
+                <div class="card-content">
+                  <div class="chart-container">
+                    <canvas id="historyChart"></canvas>
+                  </div>
+
+                  <div class="divider"></div>
+
+                  <div class="history-section">
+                    <h4>Recent Activity</h4>
+
+                    <div class="history-list">
+                      <div class="history-item">
+                        <div class="history-details">
+                          <p class="history-material">Paper</p>
+                          <p class="history-date">Sep 10, 2023</p>
+                        </div>
+                        <div class="history-weight">
+                          <span>3.2 kg</span>
+                          <i class="fas fa-chevron-right"></i>
+                        </div>
+                      </div>
+
+                      <div class="history-item">
+                        <div class="history-details">
+                          <p class="history-material">Plastic</p>
+                          <p class="history-date">Sep 8, 2023</p>
+                        </div>
+                        <div class="history-weight">
+                          <span>1.8 kg</span>
+                          <i class="fas fa-chevron-right"></i>
+                        </div>
+                      </div>
+
+                      <div class="history-item">
+                        <div class="history-details">
+                          <p class="history-material">Glass</p>
+                          <p class="history-date">Sep 5, 2023</p>
+                        </div>
+                        <div class="history-weight">
+                          <span>2.5 kg</span>
+                          <i class="fas fa-chevron-right"></i>
+                        </div>
+                      </div>
+
+                      <div class="history-item">
+                        <div class="history-details">
+                          <p class="history-material">Metal</p>
+                          <p class="history-date">Sep 2, 2023</p>
+                        </div>
+                        <div class="history-weight">
+                          <span>0.9 kg</span>
+                          <i class="fas fa-chevron-right"></i>
+                        </div>
+                      </div>
+
+                      <div class="history-item">
+                        <div class="history-details">
+                          <p class="history-material">Paper</p>
+                          <p class="history-date">Aug 29, 2023</p>
+                        </div>
+                        <div class="history-weight">
+                          <span>2.7 kg</span>
+                          <i class="fas fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="view-all">
+                      <a href="#" class="btn-link">View full history</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guide Tab -->
+            <div class="tab-pane" id="guide">
+              <div class="recycling-card full-width">
+                <div class="card-header">
+                  <h3>Recycling Guide</h3>
+                  <p>Learn how to properly sort and recycle different materials</p>
+                </div>
+                <div class="card-content">
+                  <div class="guide-items">
+                    <div class="guide-item">
+                      <div class="guide-icon blue">
+                        <i class="fas fa-recycle"></i>
+                      </div>
+                      <div class="guide-content">
+                        <h4>Paper</h4>
+                        <p class="guide-description">Newspapers, magazines, cardboard, office paper</p>
+                        <div class="guide-tips">
+                          <p><strong>Do:</strong> Remove plastic wrapping, flatten cardboard boxes</p>
+                          <p><strong>Don't:</strong> Include greasy or food-stained paper, tissues, paper towels</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="guide-item">
+                      <div class="guide-icon green">
+                        <i class="fas fa-recycle"></i>
+                      </div>
+                      <div class="guide-content">
+                        <h4>Plastic</h4>
+                        <p class="guide-description">Bottles, containers, packaging</p>
+                        <div class="guide-tips">
+                          <p><strong>Do:</strong> Rinse containers, check for recycling numbers (1-7)</p>
+                          <p><strong>Don't:</strong> Include plastic bags, styrofoam, or unmarked plastics</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="guide-item">
+                      <div class="guide-icon amber">
+                        <i class="fas fa-recycle"></i>
+                      </div>
+                      <div class="guide-content">
+                        <h4>Glass</h4>
+                        <p class="guide-description">Bottles, jars</p>
+                        <div class="guide-tips">
+                          <p><strong>Do:</strong> Rinse containers, remove lids and caps</p>
+                          <p><strong>Don't:</strong> Include window glass, mirrors, light bulbs, ceramics</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="guide-item">
+                      <div class="guide-icon gray">
+                        <i class="fas fa-recycle"></i>
+                      </div>
+                      <div class="guide-content">
+                        <h4>Metal</h4>
+                        <p class="guide-description">Aluminum cans, steel cans, foil</p>
+                        <div class="guide-tips">
+                          <p><strong>Do:</strong> Rinse containers, flatten if possible</p>
+                          <p><strong>Don't:</strong> Include aerosol cans, paint cans, or containers with food residue</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/recycling.js"></script>
+</body>
+</html>
